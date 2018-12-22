@@ -12,6 +12,6 @@ class ProductController extends Controller{
      * @Route("/product",name="product")
      */
     public function index(Request $request){
-        return new Response ("<marquee>Hello Dhairya</marquee>");
+        return new Response ("<h1>Hello Dhairya</h1>");
     }
 }
