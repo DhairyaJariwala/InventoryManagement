@@ -13,12 +13,9 @@ body {
   background-color: #868686;
 }
 
-form{
-    margin: 0px 400px;
-}
 .hidden{
    color: red;
-   width: 100px;
+/*   display: none;*/
 }
 
 table {
@@ -27,8 +24,17 @@ table {
   box-shadow: -1px -2px 8px 10px black;
 }
 
+form{
+    margin-left: 240px;
+}
 
+ul{
+    list-style-type: none;
+}
 
+li:before{
+    content: "\2718\20";
+}
 /* Add padding to containers */
 .container {
   padding: 16px;
