@@ -97,12 +97,7 @@ class LoginFormAuthenticator extends AbstractGuardAuthenticator{
     }
     
     public function supportsRememberMe() {
-//        if($request->request->get('remember') === true){
-//            return true;
-//        }
-//        else{
-//            return false;
-//        }
+       return false;
     }
 }
 ?>
