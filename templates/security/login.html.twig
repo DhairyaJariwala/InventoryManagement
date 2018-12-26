@@ -1,0 +1,51 @@
+{% extends 'LoginBase.html.twig' %}
+
+{% block title %}Log in{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/login.css') }}">
+{%endblock%}
+{% block body %}
+ <form method="POST">
+  <table class="container" align="center">
+      <tr>
+      <td colspan="2" align="center">
+          {% if error %}
+            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+          {% endif %}
+      </td>
+    </tr>
+      <tr class="imgcontainer">
+    <td colspan="2"><img src="img_avatar3.png" alt="Avatar" class="avatar"></td>
+  </tr>
+    <tr>
+    <td><label for="email"><b>Email</b></label></td>
+    <td><input type="text" placeholder="Enter Username" name="uname" value="{{ last_username }}" required></td>
+    </tr>
+    <tr>
+    <td><label for="psw"><b>Password</b></label></td>
+    <td><input type="password" placeholder="Enter Password" name="psw" required></td>
+    </tr>
+    <tr>
+        <td>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+        </td>
+    <tr>
+        <td colspan="2">
+            <input type="submit" value="Submit">
+            <a href="{{ path('app_login') }}" class="anchor"><input type="reset" class="cancelbtn" value="Cancle"></a>
+        </td>
+    </tr>
+    <tr>
+        <td><span class="psw"> <a href="#">Forgotpassword?</a></span></td>
+        <td class="guest"> <span><a href="{{ path("register") }}">Guest User</a></span></td>
+    </tr>
+    <tr>
+        <td colspan="2"><input type="hidden" name="_csrf_token"
+           value="{{ csrf_token('authenticate') }}"></td>
+    </tr>
+  </table>
+</form> 
+{% endblock %}

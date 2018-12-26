@@ -12,6 +12,6 @@ class ProductController extends Controller{
      * @Route("/product",name="product")
      */
     public function index(Request $request){
-        return new Response ("<h1>Hello Dhairya</h1>");
+        return $this->render('base.html.twig');
     }
 }

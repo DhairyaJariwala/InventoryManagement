@@ -3,7 +3,24 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/var/www/html/InventoryManagement/config/packages/security.yaml</file>
+            <file>file:/var/www/html/InventoryManagement/src/Security/LoginAuthenticator.php</file>
+            <file>file:/var/www/html/InventoryManagement/templates/Registration/registration.html.twig</file>
+            <file>file:/var/www/html/InventoryManagement/src/Repository/UserRepository.php</file>
+            <file>file:/var/www/html/InventoryManagement/src/Entity/User.php</file>
+            <file>file:/var/www/html/InventoryManagement/templates/LoginBase.html.twig</file>
+            <file>file:/var/www/html/InventoryManagement/src/Security/LoginFormAuthenticator.php</file>
+            <file>file:/var/www/html/InventoryManagement/templates/security/login.html.twig</file>
+            <file>file:/var/www/html/InventoryManagement/src/Form/LoginType.php</file>
+            <file>file:/var/www/html/InventoryManagement/src/Controller/SecurityController.php</file>
+            <file>file:/var/www/html/InventoryManagement/src/Form/RegistrationType.php</file>
+            <file>file:/var/www/html/InventoryManagement/public/css/register.css</file>
+            <file>file:/var/www/html/InventoryManagement/src/Controller/SecurityLoginController.php</file>
+            <file>file:/var/www/html/InventoryManagement/src/Controller/DashboardController.php</file>
+            <file>file:/var/www/html/InventoryManagement/public/css/login.css</file>
+            <file>file:/var/www/html/InventoryManagement/templates/base.html.twig</file>
             <file>file:/var/www/html/InventoryManagement/src/Controller/ProductController.php</file>
+            <file>file:/var/www/html/InventoryManagement/public/img_avatar2.png</file>
         </group>
     </open-files>
 </project-private>

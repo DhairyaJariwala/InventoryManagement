@@ -1,0 +1,61 @@
+{% extends "LoginBase.html.twig"%}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/register.css') }}">
+{%endblock%}
+
+{% block body %}
+        {{ form_start(registerForm)}}
+  <table class="container">
+    <tr>
+      <td colspan="3"><h1 style="color: dodgerblue;">Register</h1>
+    </tr>
+    <tr>
+      <td colspan="3"><p>Please fill in this form to create an account.</p></td>
+    </tr>
+    <tr>
+        <td class="hidden" colspan="3">{{ form_errors(registerForm) }}</td>
+    </tr>
+    <tr>
+        <td colspan="3"><hr></td>
+    </tr>
+    <tr>
+        <td><b>{{ form_label(registerForm.username) }}</b></td>
+        <td>{{ form_widget(registerForm.username) }}</td>
+        <td class="hidden">{{ form_errors(registerForm.username) }}</td>
+    </tr>
+    <tr>
+        <td><b>{{ form_label(registerForm.email) }}</b></td>
+        <td>{{ form_widget(registerForm.email) }}</td>
+        <td class="hidden">{{ form_errors(registerForm.email) }}</td>
+    </tr>
+    <tr>
+        <td><b>{{ form_label(registerForm.plainpassword.first) }}</b></td>
+        <td>{{ form_widget(registerForm.plainpassword.first) }}</td>
+        <td class="hidden">{{ form_errors(registerForm.plainpassword.first) }}</td>
+    </tr>
+    <tr>
+        <td><b>{{ form_label(registerForm.plainpassword.second) }}</b></td>
+        <td>{{ form_widget(registerForm.plainpassword.second) }}</td>
+        <td class="hidden">{{ form_errors(registerForm.plainpassword.second) }}</td>
+    </tr>
+    <tr>
+        <td colspan="3"><hr></td>
+    </tr>
+    <tr>
+        <td colspan="3"><p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p></td>
+    </tr>
+    <tr>
+        <td colspan="3"><button type="submit" class="registerbtn"><a href="{{ path('dashboard') }}" class="anchor">Register</a></button></td>
+    </tr>
+    <tr class="container signin">
+        <td colspan="3" align="center">
+            <p>Already have an account? <a href="{{ path('app_login') }}">Sign in</a>.</p>
+        </td>
+    </tr>
+    {{ form_row(registerForm._token) }}
+  </table>
+        {{ form_end(registerForm,{'render_rest' : false }) }}
+{% endblock %}
